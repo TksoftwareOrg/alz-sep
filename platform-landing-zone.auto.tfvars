@@ -218,28 +218,30 @@ management_group_settings = {
       management_group_name = "security"
     }
   }
-  policy_assignments_to_modify = {
-    alz = {
-      policy_assignments = {
-        Deploy-MDFC-Config-H224 = {
-          parameters = {
-            enableAscForServers                         = "DeployIfNotExists"
-            enableAscForServersVulnerabilityAssessments = "DeployIfNotExists"
-            enableAscForSql                             = "DeployIfNotExists"
-            enableAscForAppServices                     = "DeployIfNotExists"
-            enableAscForStorage                         = "DeployIfNotExists"
-            enableAscForContainers                      = "DeployIfNotExists"
-            enableAscForKeyVault                        = "DeployIfNotExists"
-            enableAscForSqlOnVm                         = "DeployIfNotExists"
-            enableAscForArm                             = "DeployIfNotExists"
-            enableAscForOssDb                           = "DeployIfNotExists"
-            enableAscForCosmosDbs                       = "DeployIfNotExists"
-            enableAscForCspm                            = "DeployIfNotExists"
-          }
-        }
-      }
-    }
-  }
+
+  # policy_assignments_to_modify = {
+  #   alz = {
+  #     policy_assignments = {
+  #       Deploy-MDFC-Config-H224 = {
+  #         parameters = {
+  #           enableAscForServers                         = "DeployIfNotExists"
+  #           enableAscForServersVulnerabilityAssessments = "DeployIfNotExists"
+  #           enableAscForSql                             = "DeployIfNotExists"
+  #           enableAscForAppServices                     = "DeployIfNotExists"
+  #           enableAscForStorage                         = "DeployIfNotExists"
+  #           enableAscForContainers                      = "DeployIfNotExists"
+  #           enableAscForKeyVault                        = "DeployIfNotExists"
+  #           enableAscForSqlOnVm                         = "DeployIfNotExists"
+  #           enableAscForArm                             = "DeployIfNotExists"
+  #           enableAscForOssDb                           = "DeployIfNotExists"
+  #           enableAscForCosmosDbs                       = "DeployIfNotExists"
+  #           enableAscForCspm                            = "DeployIfNotExists"
+  #         }
+  #       }
+  #     }
+  #   }
+  # }
+
   /*
   # Example of how to add management group role assignments
   management_group_role_assignments = {
