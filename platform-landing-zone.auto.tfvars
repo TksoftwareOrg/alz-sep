@@ -219,9 +219,9 @@ management_group_settings = {
     }
   }
 
-  # policy_assignments_to_modify = {
-  #   alz = {
-  #     policy_assignments = {
+   policy_assignments_to_modify = {
+     alz = {
+       policy_assignments = {
   #       Deploy-MDFC-Config-H224 = {
   #         parameters = {
   #           enableAscForServers                         = "DeployIfNotExists"
@@ -238,9 +238,9 @@ management_group_settings = {
   #           enableAscForCspm                            = "DeployIfNotExists"
   #         }
   #       }
-  #     }
-  #   }
-  # }
+       }
+     }
+   }
 
   /*
   # Example of how to add management group role assignments
