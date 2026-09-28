@@ -1,0 +1,74 @@
+"management_groups":
+- "archetypes":
+  - "policy_free_root"
+  "display_name": "Grunnmur"
+  "exists": true
+  "id": "alz"
+  "parent_id": null
+- "archetypes":
+  - "policy_free"
+  "display_name": "SEP Platform"
+  "exists": false
+  "id": "platform"
+  "parent_id": "alz"
+- "archetypes":
+  - "policy_free"
+  "display_name": "Landing Zones"
+  "exists": false
+  "id": "landingzones"
+  "parent_id": "alz"
+- "archetypes":
+  - "policy_free"
+  "display_name": "Corp"
+  "exists": false
+  "id": "corp"
+  "parent_id": "landingzones"
+- "archetypes":
+  - "policy_free"
+  "display_name": "Online"
+  "exists": false
+  "id": "online"
+  "parent_id": "landingzones"
+- "archetypes":
+  - "policy_free"
+  "display_name": "Local"
+  "exists": false
+  "id": "local"
+  "parent_id": "landingzones"
+- "archetypes":
+  - "policy_free"
+  "display_name": "Sandbox"
+  "exists": false
+  "id": "sandbox"
+  "parent_id": "alz"
+- "archetypes":
+  - "policy_free"
+  "display_name": "Security"
+  "exists": false
+  "id": "security"
+  "parent_id": "platform"
+- "archetypes":
+  - "policy_free"
+  "display_name": "Management"
+  "exists": false
+  "id": "management"
+  "parent_id": "platform"
+- "archetypes":
+  - "policy_free"
+  "display_name": "Connectivity"
+  "exists": false
+  "id": "connectivity"
+  "parent_id": "platform"
+- "archetypes":
+  - "policy_free"
+  "display_name": "Identity"
+  "exists": false
+  "id": "identity"
+  "parent_id": "platform"
+- "archetypes":
+  - "policy_free"
+  "display_name": "Decommissioned"
+  "exists": false
+  "id": "decommissioned"
+  "parent_id": "alz"
+"name": "alz_custom"
