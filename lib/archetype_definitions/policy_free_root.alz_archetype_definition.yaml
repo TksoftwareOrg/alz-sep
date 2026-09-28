@@ -1,0 +1,10 @@
+name: policy_free_root
+policy_assignments: []
+policy_definitions: []
+policy_set_definitions: []
+role_definitions:
+  - Application-Owners
+  - Network-Management
+  - Network-Subnet-Contributor
+  - Security-Operations
+  - Subscription-Owner
