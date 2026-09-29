@@ -51,7 +51,7 @@
   - "policy_free"
   "display_name": "Management"
   "exists": false
-  "id": "management"
+  "id": "sepmanagement"
   "parent_id": "platform"
 - "archetypes":
   - "policy_free"
