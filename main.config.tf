@@ -19,6 +19,7 @@ module "config" {
     virtual_hubs                    = var.virtual_hubs
     management_resource_settings    = var.management_resource_settings
     management_group_settings       = var.management_group_settings
+    audit_log_analytics_settings    = var.audit_log_analytics_settings
     tags                            = var.tags
     connectivity_tags               = var.connectivity_tags
   }
