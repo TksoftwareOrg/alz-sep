@@ -211,7 +211,7 @@ management_group_settings = {
     }
     management = {
       subscription_id       = "$${subscription_id_management}"
-      management_group_name = "management"
+      management_group_name = "sepmanagement"
     }
     security = {
       subscription_id       = "$${subscription_id_security}"
