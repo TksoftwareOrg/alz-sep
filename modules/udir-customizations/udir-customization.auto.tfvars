@@ -1,1 +1,1 @@
-location = "swedencentral"
+# location = "swedencentral"
