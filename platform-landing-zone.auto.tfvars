@@ -164,20 +164,6 @@ management_resource_settings = {
 }
 
 /*
---- Audit Log Analytics Workspace ---
-A dedicated Log Analytics Workspace for audit logs, separate from the platform workspace above.
-This keeps audit data on its own retention period and access boundary. Diagnostic settings that
-feed this workspace (Activity Log, Entra ID, etc.) are configured separately via policy assignments
-in `management_group_settings.policy_assignments_to_modify` below.
-*/
-audit_log_analytics_enabled = true
-
-audit_log_analytics_settings = {
-  location                                  = "$${starter_location_01}"
-  log_analytics_workspace_retention_in_days = 365
-}
-
-/*
 --- Management Groups and Policy ---
 You can use this section to customize the management groups and policies that will be deployed.
 You can further configure management groups and policy by supplying a `lib` folder. This is detailed in the Accelerator documentation.
