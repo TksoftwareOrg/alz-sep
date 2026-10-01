@@ -1,29 +1,32 @@
-data "azurerm_resource_group" "example" {
-  location = var.location
-  name     = "rg-management-${var.location}"
+# data "azurerm_resource_group" "example" {
+#   name = "rg-management-${var.location}"
+# }
+locals {
+    # resource_group_name = "rg-management-${var.location}"
+  resource_group_name = var.resource_group_name  
 }
 
 
 resource "azurerm_user_assigned_identity" "ama" {
   location            = var.location
   name                = "id-management-ama-${var.location}"
-  resource_group_name = data.azurerm_resource_group.example.name
+  resource_group_name = local.resource_group_name
 }
 
 
 resource "azurerm_log_analytics_workspace" "example" {
   name                = "log-analytics-management-${var.location}"
-  location            = data.azurerm_resource_group.example.location
-  resource_group_name = data.azurerm_resource_group.example.name
+  location            = var.location
+  resource_group_name = local.resource_group_name
   sku                 = "PerGB2018"
-  plan                = "Basic" // Spare penger da dette ikke er low-latency data. Skal kun brukes til statistikk og Defender workbooks
+  # plan                = "Basic" // Spare penger da dette ikke er low-latency data. Skal kun brukes til statistikk og Defender workbooks
   retention_in_days   = 180 // Eller lengre for man vil gjerne ha statistikk
 }
 
 resource "azurerm_log_analytics_solution" "example" {
   solution_name         = "log-solution-management-${var.location}"
-  location              = data.azurerm_resource_group.example.location
-  resource_group_name   = data.azurerm_resource_group.example.name
+  location              = var.location
+  resource_group_name   = local.resource_group_name
   workspace_resource_id = azurerm_log_analytics_workspace.example.id
   workspace_name        = azurerm_log_analytics_workspace.example.name
 
