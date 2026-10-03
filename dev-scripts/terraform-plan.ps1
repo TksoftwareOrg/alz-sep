@@ -1,5 +1,6 @@
 param(
-    [switch]$RunInit
+    [switch]$RunInit,
+    [switch]$RunApply
 )
 
 $ErrorActionPreference = 'Stop'
@@ -40,7 +41,8 @@ if ($RunInit) {
     }
 }
 
-& terraform "-chdir=$moduleRoot" plan -input=false
+$terraformCommand = if ($RunApply) { 'apply' } else { 'plan' }
+& terraform "-chdir=$moduleRoot" $terraformCommand -input=false
 if ($LASTEXITCODE -ne 0) {
-    throw 'terraform plan failed.'
+    throw "terraform $terraformCommand failed."
 }
